@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+h1,
+h3,
+h4,
+h5 {
+  margin: 5px 0;
+}
+
+.scoreboard {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: -50px;
+  animation: slideIn 0.5s forwards;
+}
+
+.scoreboard button.export-btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.scoreboard button.export-btn:hover {
+  background-color: #0056b3;
+}
+
+.scoreboard {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 0.5s forwards;
+}
+
+.team-names input {
+  width: calc(50% - 12px);
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.team-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.team-score p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.team-score button {
+  padding: 8px 12px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+}
+
+.team-score button:hover {
+  background-color: #45a049;
+}
+
+.sets-info {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.winner-info {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.timeout-timer button {
+  padding: 8px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+}
+
+.timeout-timer button:hover {
+  background-color: #e68a00;
+}
+
+/* Ορίζουμε το στυλ του timer */
+#timer {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

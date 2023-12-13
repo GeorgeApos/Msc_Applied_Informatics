@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volleyball Scoreboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scoreboard">
+      <h1>Volleyball Scoreboard</h1>
+      <h3>George David Apostolidis</h3>
+      <h4>mai24002</h4>
+      <h5>Application Development and Big Data</h5>
+      <div class="team-names">
+        <input type="text" id="team1Name" placeholder="Team 1 Name" />
+        <input type="text" id="team2Name" placeholder="Team 2 Name" />
+      </div>
+      <div class="score">
+        <div class="team-score">
+          <p id="team1Score">0</p>
+          <button onclick="increaseScore(1)">+</button>
+        </div>
+        <div class="team-score">
+          <p id="team2Score">0</p>
+          <button onclick="increaseScore(2)">+</button>
+        </div>
+      </div>
+      <div>
+        <h3 id="servingTeamHeader">Serving Team:</h3>
+        <p id="servingTeamParagraph">-</p>
+      </div>
+      <div class="sets-info">
+        <p>Sets: <span id="setsInfo">0 - 0</span></p>
+      </div>
+      <div class="winner-info">
+        <p>Winner: <span id="winnerInfo">-</span></p>
+      </div>
+      <div class="timeout-timer">
+        <button onclick="startTimer()">Timeout</button>
+        <p id="timer">60</p>
+      </div>
+      <button onclick="exportScore()" class="export-btn">Export Score</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
