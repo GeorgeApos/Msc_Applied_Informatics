@@ -1,0 +1,18 @@
+{
+    "openFiles": [
+        "nuclearPlants.mzn",
+        "plants1.dzn",
+        "plants2.dzn",
+        "plants3.dzn"
+    ],
+    "openTab": 0,
+    "projectFiles": [
+        "nuclearPlants.mzn",
+        "plants1.dzn",
+        "plants2.dzn",
+        "plants3.dzn"
+    ],
+    "selectedBuiltinConfigId": "org.gecode.gecode",
+    "selectedBuiltinConfigVersion": "6.3.0",
+    "version": 106
+}

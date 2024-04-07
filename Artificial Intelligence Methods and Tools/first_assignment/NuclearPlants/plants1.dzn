@@ -1,0 +1,6 @@
+no_plants = 5;
+supply = [50,40,60,70,90];
+needs = [100,80,180,280,270];
+
+problems = 1;
+not_sim = [|1,3|];
