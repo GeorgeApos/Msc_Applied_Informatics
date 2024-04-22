@@ -1,14 +1,17 @@
 package gr.uom;
 
+import java.io.Serializable;
 import java.util.*;
+import io.github.cdimascio.dotenv.Dotenv;
 import redis.clients.jedis.Jedis;
 
 public class testJedis {
 
   public static void main (String [] args) throws Exception {
-    String redisHost = "172.17.0.2"; // Redis Docker
-    int redisPort = 6379;
-    Jedis jedis = new Jedis(redisHost, redisPort);
+
+    Map<String, Serializable> env = new Main().loadEnv();
+
+    Jedis jedis = new Jedis((String) env.get("REDIS_HOST"), (int) env.get("REDIS_PORT"));
 
     String key, value;
 
