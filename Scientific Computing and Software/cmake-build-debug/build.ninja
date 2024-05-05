@@ -49,8 +49,8 @@ cmake_ninja_workdir = /home/geoapos/Documents/Msc$ in$ Applied$ Informatics/Scie
 
 build cmake_object_order_depends_target_Scientific_Computing_and_Software: phony || CMakeFiles/Scientific_Computing_and_Software.dir
 
-build CMakeFiles/Scientific_Computing_and_Software.dir/first_assignment.c.o: C_COMPILER__Scientific_Computing_and_Software_unscanned_Debug /home/geoapos/Documents/Msc$ in$ Applied$ Informatics/Scientific$ Computing$ and$ Software/first_assignment.c || cmake_object_order_depends_target_Scientific_Computing_and_Software
-  DEP_FILE = CMakeFiles/Scientific_Computing_and_Software.dir/first_assignment.c.o.d
+build CMakeFiles/Scientific_Computing_and_Software.dir/main.c.o: C_COMPILER__Scientific_Computing_and_Software_unscanned_Debug /home/geoapos/Documents/Msc$ in$ Applied$ Informatics/Scientific$ Computing$ and$ Software/main.c || cmake_object_order_depends_target_Scientific_Computing_and_Software
+  DEP_FILE = CMakeFiles/Scientific_Computing_and_Software.dir/main.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Scientific_Computing_and_Software.dir
   OBJECT_FILE_DIR = CMakeFiles/Scientific_Computing_and_Software.dir
@@ -63,7 +63,7 @@ build CMakeFiles/Scientific_Computing_and_Software.dir/first_assignment.c.o: C_C
 #############################################
 # Link the executable Scientific_Computing_and_Software
 
-build Scientific_Computing_and_Software: C_EXECUTABLE_LINKER__Scientific_Computing_and_Software_Debug CMakeFiles/Scientific_Computing_and_Software.dir/first_assignment.c.o
+build Scientific_Computing_and_Software: C_EXECUTABLE_LINKER__Scientific_Computing_and_Software_Debug CMakeFiles/Scientific_Computing_and_Software.dir/main.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Scientific_Computing_and_Software.dir
   POST_BUILD = :
