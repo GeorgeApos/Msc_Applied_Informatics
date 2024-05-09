@@ -1,4 +1,4 @@
-# Install script for directory: /home/geoapos/Documents/Msc in Applied Informatics/Scientific Computing and Software
+# Install script for directory: /home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific Computing and Software
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/geoapos/Documents/Msc in Applied Informatics/Scientific Computing and Software/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific Computing and Software/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

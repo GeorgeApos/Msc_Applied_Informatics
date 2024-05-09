@@ -1,3 +1,3 @@
-/home/geoapos/Documents/Msc in Applied Informatics/Scientific Computing and Software/cmake-build-debug/CMakeFiles/Scientific_Computing_and_Software.dir
-/home/geoapos/Documents/Msc in Applied Informatics/Scientific Computing and Software/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/geoapos/Documents/Msc in Applied Informatics/Scientific Computing and Software/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific Computing and Software/cmake-build-debug/CMakeFiles/Scientific_Computing_and_Software.dir
+/home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific Computing and Software/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific Computing and Software/cmake-build-debug/CMakeFiles/rebuild_cache.dir
