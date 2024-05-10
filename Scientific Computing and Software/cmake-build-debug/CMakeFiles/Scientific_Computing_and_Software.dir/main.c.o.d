@@ -57,5 +57,5 @@ CMakeFiles/Scientific_Computing_and_Software.dir/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
- /home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific\ Computing\ and\ Software/parallel_second_assignment.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h \
+ /home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific\ Computing\ and\ Software/parallel_second_assignment.h

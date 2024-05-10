@@ -8,6 +8,10 @@ CMake Deprecation Warning:
   use the cmake-file-api(7) to view CMake-generated project build trees.
 
 
--- Configuring done (0.0s)
+-- Checking for module 'mpi-c'
+--   No package 'mpi-c' found
+-- Could NOT find MPI_C (missing: MPI_C_LIB_NAMES MPI_C_HEADER_DIR MPI_C_WORKS) 
+-- Could NOT find MPI (missing: MPI_C_FOUND) 
+-- Configuring done (0.1s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific Computing and Software/cmake-build-debug

@@ -552,3 +552,42 @@ events:
         
       exitCode: 2
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/snap/clion/275/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:18 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific Computing and Software/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-a0OZor"
+      binary: "/home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific Computing and Software/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-a0OZor"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific Computing and Software/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-a0OZor'
+        
+        Run Build Command(s): /snap/clion/275/bin/cmake/linux/x64/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5e376/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_5e376.dir/build.make CMakeFiles/cmTC_5e376.dir/build
+        make[1]: Entering directory '/home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific Computing and Software/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-a0OZor'
+        Building C object CMakeFiles/cmTC_5e376.dir/test_mpi.c.o
+        /usr/bin/cc   -std=gnu11 -fdiagnostics-color=always -o CMakeFiles/cmTC_5e376.dir/test_mpi.c.o -c "/home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific Computing and Software/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-a0OZor/test_mpi.c"
+        \x1b[01m\x1b[K/home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific Computing and Software/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-a0OZor/test_mpi.c:1:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kmpi.h: No such file or directory
+            1 | #include \x1b[01;31m\x1b[K<mpi.h>\x1b[m\x1b[K
+              |          \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K
+        compilation terminated.
+        make[1]: *** [CMakeFiles/cmTC_5e376.dir/build.make:78: CMakeFiles/cmTC_5e376.dir/test_mpi.c.o] Error 1
+        make[1]: Leaving directory '/home/geoapos/Documents/other_repos/msc_applied_informatics/Scientific Computing and Software/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-a0OZor'
+        make: *** [Makefile:127: cmTC_5e376/fast] Error 2
+        
+      exitCode: 2
+...
