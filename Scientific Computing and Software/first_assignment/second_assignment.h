@@ -39,10 +39,6 @@ double jacobi_over_relaxation(bool method, double A[N][N], double b[N], double x
         iter++;
     } while (error > tolerance);
 
-    if(!method) {
-        printf("Jacobi Over-Relaxation: Converged in %d iterations\n", iter);
-    }
-
     return iter;
 }
 
@@ -149,7 +145,7 @@ int main2() {
         // for (int i = 0; i < current_size; i++) {
         //     printf("x[%d] = %f\n", i, x[i]);
         // }
-        printf("Jacobi Over-Relaxation: Converged in %f iterations\n", jac_iter);
+        printf("Jacobi Over-Relaxation: Converged in %2f iterations\n", jac_iter);
         printf("Elapsed time: %f seconds\n", jac_elapsed_time);
 
         printf("\n");
@@ -165,7 +161,7 @@ int main2() {
         // for (int i = 0; i < current_size; i++) {
         //     printf("x[%d] = %f\n", i, x[i]);
         // }
-        printf("Successive Over-Relaxation: Converged in %f iterations\n", sor_iter);
+        printf("Successive Over-Relaxation: Converged in %2f iterations\n", sor_iter);
         printf("Elapsed time: %f seconds\n", sor_elapsed_time);
 
         double optimal_omega = compute_optimal_omega(true, A, b, x, tolerance);
