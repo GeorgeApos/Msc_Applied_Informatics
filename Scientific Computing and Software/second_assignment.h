@@ -86,30 +86,25 @@ double successive_over_relaxation(bool method, double A[N][N], double b[N], doub
 }
 
 
-double compute_optimal_omega(double A[N][N]) {
-    double omega = 0.0;
+double compute_optimal_omega(bool method, double A[N][N], double b[N], double x[N], double tolerance) {
+    double omega, optimal_omega = 0.0;
+    int min_iterations = 1000;
 
-    double max_eigenvalue = 0.0;
-    for (int i = 0; i < N; i++) {
-        double sum = 0.0;
-        for (int j = 0; j < N; j++) {
-            sum += A[i][j];
+    for (omega = 0.9; omega <= 2.0; omega += 0.1) {
+        int iterations;
+        if (method) {
+            iterations = successive_over_relaxation(method, A, b, x, omega, tolerance);
+        } else {
+            iterations = jacobi_over_relaxation(method, A, b, x, omega, tolerance);
         }
-        if (sum > max_eigenvalue) {
-            max_eigenvalue = sum;
+
+        if (iterations < min_iterations) {
+            min_iterations = iterations;
+            optimal_omega = omega;
         }
     }
 
-    double argument = 1.0 - pow(max_eigenvalue, 2);
-
-    if (argument < 0.0) {
-        printf("Invalid argument for square root\n");
-        return 1.0;
-    }
-
-    omega = 2.0 / (1.0 + sqrt(argument));
-
-    return omega;
+    return optimal_omega;
 }
 
 int main2() {
@@ -150,10 +145,10 @@ int main2() {
         double end_time = omp_get_wtime(); // End timing
         double jac_elapsed_time = end_time - start_time;
 
-        printf("Solution using Jacobi Over-Relaxation for size %d:\n", current_size);
-        for (int i = 0; i < current_size; i++) {
-            printf("x[%d] = %f\n", i, x[i]);
-        }
+        // printf("Solution using Jacobi Over-Relaxation for size %d:\n", current_size);
+        // for (int i = 0; i < current_size; i++) {
+        //     printf("x[%d] = %f\n", i, x[i]);
+        // }
         printf("Jacobi Over-Relaxation: Converged in %f iterations\n", jac_iter);
         printf("Elapsed time: %f seconds\n", jac_elapsed_time);
 
@@ -166,14 +161,14 @@ int main2() {
         end_time = omp_get_wtime(); // End timing
         double sor_elapsed_time = end_time - start_time;
 
-        printf("Solution using Successive Over-Relaxation for size %d:\n", current_size);
-        for (int i = 0; i < current_size; i++) {
-            printf("x[%d] = %f\n", i, x[i]);
-        }
+        // printf("Solution using Successive Over-Relaxation for size %d:\n", current_size);
+        // for (int i = 0; i < current_size; i++) {
+        //     printf("x[%d] = %f\n", i, x[i]);
+        // }
         printf("Successive Over-Relaxation: Converged in %f iterations\n", sor_iter);
         printf("Elapsed time: %f seconds\n", sor_elapsed_time);
 
-        double optimal_omega = compute_optimal_omega(A);
+        double optimal_omega = compute_optimal_omega(true, A, b, x, tolerance);
         printf("Optimal omega for size %d: %f\n\n", current_size, optimal_omega);
     }
 

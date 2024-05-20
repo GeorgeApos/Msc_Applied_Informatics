@@ -12,7 +12,8 @@ double par_jacobi_over_relaxation(bool method, double A[N][N], double b[N], doub
     int i, j, iter = 0;
 
     do {
-        #pragma omp parallel for private(j) shared(A, b, x, x_new) // Distribute loop iterations across threads
+        error = 0.0;
+        #pragma omp parallel for private(i, j) shared(x_new, x, A, b) reduction(max:error)
         for (i = 0; i < N; i++) {
             double sigma = 0.0;
             for (j = 0; j < N; j++) {
@@ -26,15 +27,15 @@ double par_jacobi_over_relaxation(bool method, double A[N][N], double b[N], doub
             } else {
                 x_new[i] = (1 - omega) * x[i] + (omega / A[i][i]) * (b[i] - sigma);
             }
-        }
 
-        error = 0.0;
-        #pragma omp parallel for reduction(max:error) // Combine maximum errors from all threads
-        for (i = 0; i < N; i++) {
             double diff = fabs(x_new[i] - x[i]);
             if (diff > error) {
                 error = diff;
             }
+        }
+
+        #pragma omp parallel for
+        for (i = 0; i < N; i++) {
             x[i] = x_new[i];
         }
 
@@ -54,7 +55,8 @@ double par_successive_over_relaxation(bool method, double A[N][N], double b[N], 
     int i, j, iter = 0;
 
     do {
-        #pragma omp parallel for private(j) shared(A, b, x, x_new) // Distribute loop iterations across threads
+        error = 0.0;
+        #pragma omp parallel for private(i, j) shared(x_new, x, A, b) reduction(max:error)
         for (i = 0; i < N; i++) {
             double sum1 = 0.0, sum2 = 0.0;
             for (j = 0; j < i; j++) {
@@ -69,24 +71,20 @@ double par_successive_over_relaxation(bool method, double A[N][N], double b[N], 
             } else {
                 x_new[i] = (1 - omega) * x[i] + (omega / A[i][i]) * (b[i] - sum1 - sum2);
             }
-        }
 
-        error = 0.0;
-        #pragma omp parallel for reduction(max:error) // Combine maximum errors from all threads
-        for (i = 0; i < N; i++) {
             double diff = fabs(x_new[i] - x[i]);
             if (diff > error) {
                 error = diff;
             }
+        }
+
+        #pragma omp parallel for
+        for (i = 0; i < N; i++) {
             x[i] = x_new[i];
         }
 
         iter++;
     } while (error > tolerance && iter < 1000);
-
-    if(!method) {
-        printf("Successive Over-Relaxation: Converged in %d iterations\n", iter);
-    }
 
     return iter;
 }
@@ -98,6 +96,8 @@ int main3() {
     double tolerance = 1e-7;
     int sizes[] = {1000, 10000, 20000};
     int num_sizes = sizeof(sizes) / sizeof(sizes[0]);
+    int num_cores[] = {1, 2, 4, 8}; // Adjust according to available cores
+    int num_core_sizes = sizeof(num_cores) / sizeof(num_cores[0]);
 
     if (A == NULL || b == NULL || x == NULL) {
         printf("Memory allocation failed\n");
@@ -108,6 +108,7 @@ int main3() {
         int current_size = sizes[k];
 
         // Construct the A matrix
+        #pragma omp parallel for
         for (int i = 0; i < current_size; i++) {
             for (int j = 0; j < current_size; j++) {
                 if (i == j) {
@@ -122,38 +123,47 @@ int main3() {
             x[i] = 0.0; // Initialize x to 0.0
         }
 
+        double serial_time_jac, parallel_time_jac;
+        double serial_time_sor, parallel_time_sor;
 
+        // Jacobi Over-Relaxation Serial
         double start_time = omp_get_wtime(); // Start timing
+        jacobi_over_relaxation(false, A, b, x, 1, tolerance);
+        serial_time_jac = omp_get_wtime() - start_time; // End timing
 
-        double jac_iter = par_jacobi_over_relaxation(false, A, b, x, 1, tolerance);
-
-        double end_time = omp_get_wtime(); // End timing
-        double jac_elapsed_time = end_time - start_time;
-
-        printf("Solution using Parallel Jacobi Over-Relaxation for size %d:\n", current_size);
-        for (int i = 0; i < current_size; i++) {
-            printf("x[%d] = %f\n", i, x[i]);
-        }
-        printf("Jacobi Over-Relaxation: Converged in %f iterations\n", jac_iter);
-        printf("Elapsed time: %f seconds\n", jac_elapsed_time);
-
-        printf("\n");
-
+        // Successive Over-Relaxation Serial
         start_time = omp_get_wtime(); // Start timing
+        successive_over_relaxation(false, A, b, x, 1, tolerance);
+        serial_time_sor = omp_get_wtime() - start_time; // End timing
 
-        double sor_iter = par_successive_over_relaxation(false, A, b, x, 1, tolerance);
+        for (int c = 0; c < num_core_sizes; c++) {
+            int cores = num_cores[c];
+            omp_set_num_threads(cores);
 
-        end_time = omp_get_wtime(); // End timing
-        double sor_elapsed_time = end_time - start_time;
+            // Jacobi Over-Relaxation Parallel
+            start_time = omp_get_wtime(); // Start timing
+            par_jacobi_over_relaxation(false, A, b, x, 1, tolerance);
+            parallel_time_jac = omp_get_wtime() - start_time; // End timing
 
-        printf("Solution using Successive Parallel Over-Relaxation for size %d:\n", current_size);
-        for (int i = 0; i < current_size; i++) {
-            printf("x[%d] = %f\n", i, x[i]);
+            double speedup_jac = serial_time_jac / parallel_time_jac;
+            double efficiency_jac = speedup_jac / cores;
+
+            printf("Jacobi Over-Relaxation for size %d with %d cores: Speedup = %f, Efficiency = %f\n",
+                   current_size, cores, speedup_jac, efficiency_jac);
+
+            // Successive Over-Relaxation Parallel
+            start_time = omp_get_wtime(); // Start timing
+            par_successive_over_relaxation(false, A, b, x, 1, tolerance);
+            parallel_time_sor = omp_get_wtime() - start_time; // End timing
+
+            double speedup_sor = serial_time_sor / parallel_time_sor;
+            double efficiency_sor = speedup_sor / cores;
+
+            printf("Successive Over-Relaxation for size %d with %d cores: Speedup = %f, Efficiency = %f\n",
+                   current_size, cores, speedup_sor, efficiency_sor);
         }
-        printf("Successive Over-Relaxation: Converged in %f iterations\n", sor_iter);
-        printf("Elapsed time: %f seconds\n", sor_elapsed_time);
 
-        double optimal_omega = compute_optimal_omega(A);
+        double optimal_omega = compute_optimal_omega(true, A, b, x, tolerance);
         printf("Optimal omega for size %d: %f\n\n", current_size, optimal_omega);
     }
 
