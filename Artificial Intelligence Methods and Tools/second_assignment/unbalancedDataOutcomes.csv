@@ -1,0 +1,185 @@
+Classifier Name,Dataset,Balance,Num Training Samples,Num Non-Healthy Companies,TP,TN,FP,FN,F1 Score,AUC ROC
+Linear Discriminant Analysis,Train,Unbalanced,8037,186,10,7774,77,176,0.06474820143884892,0.5219778865235988
+Linear Discriminant Analysis,Test,Unbalanced,2679,62,2,2600,17,60,0.044444444444444446,0.5128810383719353
+Linear Discriminant Analysis,Train,Unbalanced,8037,186,10,7786,65,176,0.07719298245614035,0.5227421203791586
+Linear Discriminant Analysis,Test,Unbalanced,2679,62,2,2588,29,60,0.0784313725490196,0.510588336805256
+Linear Discriminant Analysis,Train,Unbalanced,8037,186,8,7782,69,178,0.0875912408759124,0.5171110316746171
+Linear Discriminant Analysis,Test,Unbalanced,2679,62,4,2592,25,58,0.06521739130434784,0.5274816029188802
+Linear Discriminant Analysis,Train,Unbalanced,8037,186,8,7780,71,178,0.06015037593984964,0.5169836593653572
+Linear Discriminant Analysis,Test,Unbalanced,2679,62,4,2594,23,58,0.09090909090909091,0.5278637198466601
+Linear Discriminant Analysis_lsqr_auto,Train,Unbalanced,8037,186,10,7758,93,176,0.09824561403508772,0.520958908049519
+Linear Discriminant Analysis_lsqr_auto,Test,Unbalanced,2679,62,5,2588,29,57,0.08163265306122448,0.5347818851923527
+Linear Discriminant Analysis_lsqr_auto,Train,Unbalanced,8037,186,13,7767,84,173,0.0948905109489051,0.5295965995702211
+Linear Discriminant Analysis_lsqr_auto,Test,Unbalanced,2679,62,2,2579,38,60,0.049999999999999996,0.5088688106302464
+Linear Discriminant Analysis_lsqr_auto,Train,Unbalanced,8037,186,11,7752,99,175,0.04633204633204633,0.5232649631647499
+Linear Discriminant Analysis_lsqr_auto,Test,Unbalanced,2679,62,4,2594,23,58,0.04597701149425287,0.5278637198466601
+Linear Discriminant Analysis_lsqr_auto,Train,Unbalanced,8037,186,11,7761,90,175,0.08480565371024734,0.5238381385564198
+Linear Discriminant Analysis_lsqr_auto,Test,Unbalanced,2679,62,4,2585,32,58,0.058823529411764705,0.5261441936716506
+Logistic Regression_max_iter_1000,Train,Unbalanced,8037,186,0,7849,2,186,0.010526315789473686,0.49987262769074003
+Logistic Regression_max_iter_1000,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Logistic Regression_max_iter_1000,Train,Unbalanced,8037,186,0,7849,2,186,0.010582010582010583,0.49987262769074003
+Logistic Regression_max_iter_1000,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Logistic Regression_max_iter_1000,Train,Unbalanced,8037,186,0,7850,1,186,0.010695187165775402,0.49993631384537
+Logistic Regression_max_iter_1000,Test,Unbalanced,2679,62,0,2616,1,62,0.0,0.49980894153611005
+Logistic Regression_max_iter_1000,Train,Unbalanced,8037,186,0,7850,1,186,0.0,0.49993631384537
+Logistic Regression_max_iter_1000,Test,Unbalanced,2679,62,0,2616,1,62,0.0,0.49980894153611005
+Logistic Regression_max_iter_500,Train,Unbalanced,8037,186,1,7848,3,185,0.010695187165775402,0.5024971135791209
+Logistic Regression_max_iter_500,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Logistic Regression_max_iter_500,Train,Unbalanced,8037,186,1,7848,3,185,0.010695187165775402,0.5024971135791209
+Logistic Regression_max_iter_500,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Logistic Regression_max_iter_500,Train,Unbalanced,8037,186,1,7851,0,185,0.010695187165775402,0.5026881720430108
+Logistic Regression_max_iter_500,Test,Unbalanced,2679,62,0,2614,3,62,0.0,0.49942682460833016
+Logistic Regression_max_iter_500,Train,Unbalanced,8037,186,0,7848,3,186,0.0,0.49980894153611005
+Logistic Regression_max_iter_500,Test,Unbalanced,2679,62,1,2617,0,61,0.03125,0.5080645161290323
+Logistic Regression_max_iter_1500_liblinear,Train,Unbalanced,8037,186,1,7847,4,185,0.010695187165775402,0.5024334274244908
+Logistic Regression_max_iter_1500_liblinear,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Logistic Regression_max_iter_1500_liblinear,Train,Unbalanced,8037,186,0,7848,3,186,0.010695187165775402,0.49980894153611005
+Logistic Regression_max_iter_1500_liblinear,Test,Unbalanced,2679,62,1,2616,1,61,0.0,0.5078734576651422
+Logistic Regression_max_iter_1500_liblinear,Train,Unbalanced,8037,186,1,7848,3,185,0.0,0.5024971135791209
+Logistic Regression_max_iter_1500_liblinear,Test,Unbalanced,2679,62,0,2616,1,62,0.031746031746031744,0.49980894153611005
+Logistic Regression_max_iter_1500_liblinear,Train,Unbalanced,8037,186,1,7849,2,185,0.010526315789473686,0.5025607997337508
+Logistic Regression_max_iter_1500_liblinear,Test,Unbalanced,2679,62,0,2615,2,62,0.0,0.4996178830722201
+Decision Tree_max_depth_5,Train,Unbalanced,8037,186,10,7848,3,176,0.09230769230769231,0.5266906619662176
+Decision Tree_max_depth_5,Test,Unbalanced,2679,62,8,2616,1,54,0.0,0.5643250705683681
+Decision Tree_max_depth_5,Train,Unbalanced,8037,186,12,7848,3,174,0.20095693779904306,0.5320670060522391
+Decision Tree_max_depth_5,Test,Unbalanced,2679,62,6,2616,1,56,0.028985507246376815,0.5481960383103036
+Decision Tree_max_depth_5,Train,Unbalanced,8037,186,17,7848,3,169,0.1923076923076923,0.5455078662672929
+Decision Tree_max_depth_5,Test,Unbalanced,2679,62,1,2616,1,61,0.0,0.5078734576651422
+Decision Tree_max_depth_5,Train,Unbalanced,8037,186,15,7848,3,171,0.16666666666666669,0.5401315221812713
+Decision Tree_max_depth_5,Test,Unbalanced,2679,62,3,2616,1,59,0.030303030303030304,0.5240024899232069
+Decision Tree_max_depth_10,Train,Unbalanced,8037,186,88,7825,26,98,0.6808510638297872,0.7349032997645667
+Decision Tree_max_depth_10,Test,Unbalanced,2679,62,26,2607,10,36,0.08421052631578947,0.7077668347159393
+Decision Tree_max_depth_10,Train,Unbalanced,8037,186,87,7823,28,99,0.7533333333333333,0.732087755412296
+Decision Tree_max_depth_10,Test,Unbalanced,2679,62,27,2609,8,35,0.1694915254237288,0.7162134677727514
+Decision Tree_max_depth_10,Train,Unbalanced,8037,186,89,7824,27,97,0.7516339869281046,0.7375277856529475
+Decision Tree_max_depth_10,Test,Unbalanced,2679,62,25,2608,9,37,0.055045871559633024,0.6998933770507969
+Decision Tree_max_depth_10,Train,Unbalanced,8037,186,78,7824,27,108,0.7205387205387205,0.7079578931798293
+Decision Tree_max_depth_10,Test,Unbalanced,2679,62,36,2608,9,26,0.13861386138613863,0.7886030544701518
+Decision Tree_max_depth_15,Train,Unbalanced,8037,186,135,7806,45,51,0.967032967032967,0.8600373488481023
+Decision Tree_max_depth_15,Test,Unbalanced,2679,62,52,2604,13,10,0.11347517730496454,0.9168710786791081
+Decision Tree_max_depth_15,Train,Unbalanced,8037,186,147,7812,39,39,0.9586776859504132,0.8926775302920111
+Decision Tree_max_depth_15,Test,Unbalanced,2679,62,40,2598,19,22,0.18705035971223022,0.8189505343473812
+Decision Tree_max_depth_15,Train,Unbalanced,8037,186,141,7807,44,45,0.9723756906077349,0.8762300672607968
+Decision Tree_max_depth_15,Test,Unbalanced,2679,62,46,2603,14,16,0.13846153846153847,0.8682929234410245
+Decision Tree_max_depth_15,Train,Unbalanced,8037,186,138,7805,46,48,0.986449864498645,0.8680381788225046
+Decision Tree_max_depth_15,Test,Unbalanced,2679,62,49,2605,12,13,0.08064516129032258,0.8928685887559012
+Random Forest_n_estimators_100_max_depth_5,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Random Forest_n_estimators_100_max_depth_5,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Random Forest_n_estimators_100_max_depth_5,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Random Forest_n_estimators_100_max_depth_5,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Random Forest_n_estimators_100_max_depth_5,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Random Forest_n_estimators_100_max_depth_5,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Random Forest_n_estimators_100_max_depth_5,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Random Forest_n_estimators_100_max_depth_5,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Random Forest_n_estimators_200_max_depth_10,Train,Unbalanced,8037,186,57,7851,0,129,0.5060240963855421,0.6532258064516129
+Random Forest_n_estimators_200_max_depth_10,Test,Unbalanced,2679,62,16,2617,0,46,0.0,0.6290322580645161
+Random Forest_n_estimators_200_max_depth_10,Train,Unbalanced,8037,186,53,7851,0,133,0.5354330708661417,0.6424731182795699
+Random Forest_n_estimators_200_max_depth_10,Test,Unbalanced,2679,62,20,2617,0,42,0.0,0.6612903225806451
+Random Forest_n_estimators_200_max_depth_10,Train,Unbalanced,8037,186,58,7851,0,128,0.5238095238095238,0.6559139784946236
+Random Forest_n_estimators_200_max_depth_10,Test,Unbalanced,2679,62,15,2617,0,47,0.03125,0.6209677419354839
+Random Forest_n_estimators_200_max_depth_10,Train,Unbalanced,8037,186,51,7851,0,135,0.5637065637065637,0.6370967741935484
+Random Forest_n_estimators_200_max_depth_10,Test,Unbalanced,2679,62,22,2617,0,40,0.0,0.6774193548387097
+Random Forest_n_estimators_300_max_depth_15,Train,Unbalanced,8037,186,135,7851,0,51,0.9973045822102425,0.8629032258064516
+Random Forest_n_estimators_300_max_depth_15,Test,Unbalanced,2679,62,50,2617,0,12,0.09230769230769231,0.9032258064516129
+Random Forest_n_estimators_300_max_depth_15,Train,Unbalanced,8037,186,139,7851,0,47,1.0,0.8736559139784946
+Random Forest_n_estimators_300_max_depth_15,Test,Unbalanced,2679,62,46,2617,0,16,0.03125,0.8709677419354839
+Random Forest_n_estimators_300_max_depth_15,Train,Unbalanced,8037,186,138,7851,0,48,1.0,0.8709677419354839
+Random Forest_n_estimators_300_max_depth_15,Test,Unbalanced,2679,62,47,2617,0,15,0.031746031746031744,0.8790322580645161
+Random Forest_n_estimators_300_max_depth_15,Train,Unbalanced,8037,186,143,7851,0,43,0.9973045822102425,0.8844086021505376
+Random Forest_n_estimators_300_max_depth_15,Test,Unbalanced,2679,62,42,2617,0,20,0.0,0.8387096774193548
+k-Nearest Neighbors_n_neighbors_5,Train,Unbalanced,8037,186,21,7847,4,165,0.19444444444444445,0.5561968682847058
+k-Nearest Neighbors_n_neighbors_5,Test,Unbalanced,2679,62,2,2614,3,60,0.0821917808219178,0.5155558568663947
+k-Nearest Neighbors_n_neighbors_5,Train,Unbalanced,8037,186,18,7846,5,168,0.16504854368932037,0.5480686660010436
+k-Nearest Neighbors_n_neighbors_5,Test,Unbalanced,2679,62,5,2615,2,57,0.08695652173913042,0.5399404637173815
+k-Nearest Neighbors_n_neighbors_5,Train,Unbalanced,8037,186,13,7845,6,173,0.15533980582524273,0.53456411963136
+k-Nearest Neighbors_n_neighbors_5,Test,Unbalanced,2679,62,10,2616,1,52,0.0588235294117647,0.5804541028264327
+k-Nearest Neighbors_n_neighbors_5,Train,Unbalanced,8037,186,17,7845,6,169,0.18957345971563982,0.545316807803403
+k-Nearest Neighbors_n_neighbors_5,Test,Unbalanced,2679,62,6,2616,1,56,0.08955223880597016,0.5481960383103036
+k-Nearest Neighbors_n_neighbors_10,Train,Unbalanced,8037,186,0,7851,0,186,0.021276595744680854,0.5
+k-Nearest Neighbors_n_neighbors_10,Test,Unbalanced,2679,62,1,2617,0,61,0.031746031746031744,0.5080645161290323
+k-Nearest Neighbors_n_neighbors_10,Train,Unbalanced,8037,186,1,7851,0,185,0.010695187165775402,0.5026881720430108
+k-Nearest Neighbors_n_neighbors_10,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+k-Nearest Neighbors_n_neighbors_10,Train,Unbalanced,8037,186,1,7851,0,185,0.04166666666666667,0.5026881720430108
+k-Nearest Neighbors_n_neighbors_10,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+k-Nearest Neighbors_n_neighbors_10,Train,Unbalanced,8037,186,1,7851,0,185,0.010695187165775402,0.5026881720430108
+k-Nearest Neighbors_n_neighbors_10,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+k-Nearest Neighbors_n_neighbors_15,Train,Unbalanced,8037,186,2,7851,0,184,0.0,0.5053763440860215
+k-Nearest Neighbors_n_neighbors_15,Test,Unbalanced,2679,62,0,2617,0,62,0.031746031746031744,0.5
+k-Nearest Neighbors_n_neighbors_15,Train,Unbalanced,8037,186,0,7851,0,186,0.021276595744680854,0.5
+k-Nearest Neighbors_n_neighbors_15,Test,Unbalanced,2679,62,2,2617,0,60,0.0,0.5161290322580645
+k-Nearest Neighbors_n_neighbors_15,Train,Unbalanced,8037,186,2,7851,0,184,0.021276595744680854,0.5053763440860215
+k-Nearest Neighbors_n_neighbors_15,Test,Unbalanced,2679,62,0,2617,0,62,0.031746031746031744,0.5
+k-Nearest Neighbors_n_neighbors_15,Train,Unbalanced,8037,186,2,7851,0,184,0.021276595744680854,0.5053763440860215
+k-Nearest Neighbors_n_neighbors_15,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Naïve Bayes,Train,Unbalanced,8037,186,41,7424,427,145,0.1373134328358209,0.583021065736438
+Naïve Bayes,Test,Unbalanced,2679,62,18,2469,148,44,0.1322314049586777,0.616884637666868
+Naïve Bayes,Train,Unbalanced,8037,186,47,7419,432,139,0.1341107871720117,0.5988316672213525
+Naïve Bayes,Test,Unbalanced,2679,62,12,2474,143,50,0.11267605633802816,0.5694528332121244
+Naïve Bayes,Train,Unbalanced,8037,186,44,7427,424,142,0.13913043478260867,0.5912766403293601
+Naïve Bayes,Test,Unbalanced,2679,62,15,2466,151,47,0.13888888888888892,0.5921179138881014
+Naïve Bayes,Train,Unbalanced,8037,186,45,7409,442,141,0.13273001508295626,0.5928184615890312
+Naïve Bayes,Test,Unbalanced,2679,62,14,2484,133,48,0.13698630136986303,0.5874924501090882
+Naïve Bayes_var_smoothing_0.1,Train,Unbalanced,8037,186,18,7668,183,168,0.10972568578553617,0.5367325304769066
+Naïve Bayes_var_smoothing_0.1,Test,Unbalanced,2679,62,10,2556,61,52,0.07518796992481204,0.5689905949930357
+Naïve Bayes_var_smoothing_0.1,Train,Unbalanced,8037,186,21,7666,185,165,0.1070559610705596,0.5446696742966788
+Naïve Bayes_var_smoothing_0.1,Test,Unbalanced,2679,62,7,2558,59,55,0.07142857142857142,0.5451791635337186
+Naïve Bayes_var_smoothing_0.1,Train,Unbalanced,8037,186,22,7670,181,164,0.08955223880597014,0.5476125909582096
+Naïve Bayes_var_smoothing_0.1,Test,Unbalanced,2679,62,6,2554,63,56,0.12121212121212123,0.5363504135491267
+Naïve Bayes_var_smoothing_0.1,Train,Unbalanced,8037,186,23,7668,183,163,0.09278350515463918,0.5501733906919603
+Naïve Bayes_var_smoothing_0.1,Test,Unbalanced,2679,62,5,2556,61,57,0.1515151515151515,0.5286680143478742
+Naïve Bayes_var_smoothing_0.01,Train,Unbalanced,8037,186,43,7450,401,143,0.13099041533546327,0.590053249842839
+Naïve Bayes_var_smoothing_0.01,Test,Unbalanced,2679,62,15,2475,142,47,0.12440191387559808,0.5938374400631109
+Naïve Bayes_var_smoothing_0.01,Train,Unbalanced,8037,186,47,7457,394,139,0.140405616224649,0.601251741097292
+Naïve Bayes_var_smoothing_0.01,Test,Unbalanced,2679,62,11,2468,149,51,0.11518324607329844,0.5602419662997522
+Naïve Bayes_var_smoothing_0.01,Train,Unbalanced,8037,186,38,7430,421,148,0.13063763608087092,0.5753386665351856
+Naïve Bayes_var_smoothing_0.01,Test,Unbalanced,2679,62,20,2495,122,42,0.1320754716981132,0.6379811899860712
+Naïve Bayes_var_smoothing_0.01,Train,Unbalanced,8037,186,46,7438,413,140,0.13015873015873017,0.5973535321163115
+Naïve Bayes_var_smoothing_0.01,Test,Unbalanced,2679,62,12,2487,130,50,0.15525114155251143,0.5719365932426935
+Support Vector Machines_rbf,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Support Vector Machines_rbf,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Support Vector Machines_rbf,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Support Vector Machines_rbf,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Support Vector Machines_rbf,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Support Vector Machines_rbf,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Support Vector Machines_rbf,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Support Vector Machines_rbf,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Support Vector Machines_linear,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Support Vector Machines_linear,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Support Vector Machines_linear,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Support Vector Machines_linear,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Support Vector Machines_linear,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Support Vector Machines_linear,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Support Vector Machines_linear,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Support Vector Machines_linear,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Support Vector Machines_poly_degree_2,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Support Vector Machines_poly_degree_2,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Support Vector Machines_poly_degree_2,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Support Vector Machines_poly_degree_2,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Support Vector Machines_poly_degree_2,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Support Vector Machines_poly_degree_2,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Support Vector Machines_poly_degree_2,Train,Unbalanced,8037,186,0,7851,0,186,0.0,0.5
+Support Vector Machines_poly_degree_2,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Gradient Boosting_n_estimators_100_learn_rate_0.1,Train,Unbalanced,8037,186,42,7848,3,144,0.4564315352697096,0.6127121673425617
+Gradient Boosting_n_estimators_100_learn_rate_0.1,Test,Unbalanced,2679,62,12,2615,2,50,0.08450704225352113,0.5963920766206072
+Gradient Boosting_n_estimators_100_learn_rate_0.1,Train,Unbalanced,8037,186,44,7846,5,142,0.45454545454545453,0.6179611391193232
+Gradient Boosting_n_estimators_100_learn_rate_0.1,Test,Unbalanced,2679,62,10,2617,0,52,0.08108108108108107,0.5806451612903226
+Gradient Boosting_n_estimators_100_learn_rate_0.1,Train,Unbalanced,8037,186,35,7847,4,151,0.46090534979423875,0.5938312768868564
+Gradient Boosting_n_estimators_100_learn_rate_0.1,Test,Unbalanced,2679,62,19,2616,1,43,0.028169014084507043,0.653034747987723
+Gradient Boosting_n_estimators_100_learn_rate_0.1,Train,Unbalanced,8037,186,41,7848,3,145,0.43514644351464427,0.610023995299551
+Gradient Boosting_n_estimators_100_learn_rate_0.1,Test,Unbalanced,2679,62,13,2615,2,49,0.0588235294117647,0.6044565927496395
+Gradient Boosting_n_estimators_200_learn_rate_0.05,Train,Unbalanced,8037,186,30,7849,2,156,0.35398230088495575,0.5805177889810627
+Gradient Boosting_n_estimators_200_learn_rate_0.05,Test,Unbalanced,2679,62,12,2617,0,50,0.08450704225352113,0.5967741935483871
+Gradient Boosting_n_estimators_200_learn_rate_0.05,Train,Unbalanced,8037,186,29,7851,0,157,0.2616822429906542,0.5779569892473119
+Gradient Boosting_n_estimators_200_learn_rate_0.05,Test,Unbalanced,2679,62,13,2615,2,49,0.03125,0.6044565927496395
+Gradient Boosting_n_estimators_200_learn_rate_0.05,Train,Unbalanced,8037,186,32,7849,2,154,0.3090909090909091,0.5858941330670842
+Gradient Boosting_n_estimators_200_learn_rate_0.05,Test,Unbalanced,2679,62,10,2617,0,52,0.0588235294117647,0.5806451612903226
+Gradient Boosting_n_estimators_200_learn_rate_0.05,Train,Unbalanced,8037,186,35,7849,2,151,0.3684210526315789,0.5939586491961164
+Gradient Boosting_n_estimators_200_learn_rate_0.05,Test,Unbalanced,2679,62,7,2617,0,55,0.0,0.5564516129032258
+Gradient Boosting_n_estimators_300_learn_rate_0.01,Train,Unbalanced,8037,186,2,7851,0,184,0.05235602094240838,0.5053763440860215
+Gradient Boosting_n_estimators_300_learn_rate_0.01,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Gradient Boosting_n_estimators_300_learn_rate_0.01,Train,Unbalanced,8037,186,2,7851,0,184,0.010695187165775402,0.5053763440860215
+Gradient Boosting_n_estimators_300_learn_rate_0.01,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
+Gradient Boosting_n_estimators_300_learn_rate_0.01,Train,Unbalanced,8037,186,0,7851,0,186,0.05235602094240838,0.5
+Gradient Boosting_n_estimators_300_learn_rate_0.01,Test,Unbalanced,2679,62,2,2617,0,60,0.0,0.5161290322580645
+Gradient Boosting_n_estimators_300_learn_rate_0.01,Train,Unbalanced,8037,186,2,7851,0,184,0.021276595744680854,0.5053763440860215
+Gradient Boosting_n_estimators_300_learn_rate_0.01,Test,Unbalanced,2679,62,0,2617,0,62,0.0,0.5
