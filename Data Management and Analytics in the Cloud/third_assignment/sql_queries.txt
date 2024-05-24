@@ -1,0 +1,22 @@
+Ερώτημα 1: Ζεύγη πρωτευουσών που απέχουν ως 50χλμ μεταξύ τους
+
+SELECT a.name AS city1, b.name AS city2
+FROM poleis a, poleis b
+WHERE ST_Distance(a.geometry, b.geometry) <= 50000
+AND a.pk_uid < b.pk_uid;
+
+Ερώτημα 2: Νομοί από τους οποίους περνά ο Πηνειός
+
+SELECT DISTINCT n.name_gr AS nomos
+FROM nomoi n
+JOIN potamoi p ON ST_Intersects(n.geometry, p.geometry)
+WHERE p.name LIKE 'ΠΗΝΕΙΟ%';
+
+Ερώτημα 3: Λίμνες που βρίσκονται στα όρια περισσότερων του ενός νομού
+
+SELECT DISTINCT l.name AS lake
+FROM limnes l
+JOIN nomoi n ON ST_Intersects(l.geometry, n.geometry)
+GROUP BY l.pk_uid
+HAVING COUNT(DISTINCT n.pk_uid) > 1;
+
