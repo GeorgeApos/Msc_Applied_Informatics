@@ -63,9 +63,6 @@ Covers assignments related to software systems technology.
 - **Key Files:**
   - Reports and analysis documents (`.pdf`, `.csv`, `.xlsx`)
 
-### README.md
-Provides an overview of the repository and its contents.
-
 ## Conclusion
 
 This repository is an invaluable resource for students enrolled in the M.Sc. in Applied Informatics program, offering a structured and detailed compilation of academic work and projects across various courses in the curriculum.
